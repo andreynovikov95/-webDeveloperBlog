@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class DateComponent implements OnInit {
   message: string
   constructor() { 
-    this.message = new Date().toDateString()
+    setInterval(() => {
+      this.message = new Date().toLocaleTimeString()
+    }, 1000)
   }
 
   ngOnInit(): void {
