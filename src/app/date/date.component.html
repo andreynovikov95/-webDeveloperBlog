@@ -29,9 +29,11 @@
     </li>
 </ul>
 </div>
-<div *ngIf="loggedIn; else loggedOut">
-  Logged in
-</div>
+<ng-template *ngIf="loggedIn; then loggedIn else loggedOut">
+</ng-template>
+<ng-template #loggedIn>
+  Login please
+</ng-template>
 <ng-template #loggedOut>
   Login please
 </ng-template>
