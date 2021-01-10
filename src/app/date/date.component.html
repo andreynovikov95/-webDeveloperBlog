@@ -38,4 +38,19 @@
   Login please
 </ng-template>
 
-<button (click)="myEvent($event)">Event</button>
+<button
+  *ngIf="isCollapsed"
+  (click)="toggleCollapse()"
+>
+  Show
+</button>
+<button
+  *ngIf="!isCollapsed"
+  (click)="toggleCollapse()"
+>
+  Hide
+</button>
+
+<div *ngIf="!isCollapsed">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nam culpa eaque magnam sunt id dignissimos ullam, modi fugiat labore, blanditiis ut officiis sequi quibusdam hic in molestias numquam placeat!</p>
+</div>

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DateComponent implements OnInit {
   items = ['Angular', 'React', 'Vue', 'Bootstrap', 'Node.js']
   loggedIn = false
+  isCollapsed: boolean = true
   message = new Date().toLocaleTimeString()
 
   constructor() { 
@@ -21,6 +22,10 @@ export class DateComponent implements OnInit {
 
   myEvent(event) {
     console.log(event)
+  }
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed
   }
 
 }
