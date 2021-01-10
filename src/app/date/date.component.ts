@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./date.component.styl']
 })
 export class DateComponent implements OnInit {
-  items = ['Angular', 'React', 'Vue', 'Bootstrap', 'Node.js']
-  loggedIn = false
-  isCollapsed: boolean = true
-  message = new Date().toLocaleTimeString()
+  message: string = new Date().toLocaleTimeString()
   oneWayBinding: string = "Hello world"
   twoWayBinding: string = "Hi"
+  items: string[] = ['Angular', 'React', 'Vue', 'Bootstrap', 'Node.js']
+  loggedIn: boolean = false
+  isCollapsed: boolean = true
+  visibility: boolean = true
 
   constructor() { 
     setInterval(() => {
@@ -28,6 +29,10 @@ export class DateComponent implements OnInit {
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed
+  }
+
+  toggle() {
+    this.visibility = !this.visibility
   }
 
 }

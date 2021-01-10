@@ -72,3 +72,41 @@
   >
   <p>{{ twoWayBinding }}</p>
 </div>
+<div [ngClass]="{class1: true}">
+  <h1>Lorem</h1>
+  <p  [ngClass]="{class2: true}">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Enim nulla consectetur accusantium corporis repellendus modi! 
+    Placeat, totam provident assumenda reiciendis dicta est sit amet ad dolorem, 
+    labore, debitis rem rerum!
+  </p>
+  <p  [class.p2]="true">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Enim nulla consectetur accusantium corporis repellendus modi! 
+    Placeat, totam provident assumenda reiciendis dicta est sit amet ad dolorem, 
+    labore, debitis rem rerum!
+  </p>
+  <p  [ngStlye]="{
+   'color': 'green'
+  }">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Enim nulla consectetur accusantium corporis repellendus modi! 
+    Placeat, totam provident assumenda reiciendis dicta est sit 
+    amet ad dolorem, labore, debitis rem rerum!
+  </p>
+</div>
+<div [ngClass]="{invisible: visibility}">
+  <h1>Hidden Lorem</h1>
+  <p  [ngClass]="{class2: true}">
+    Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Enim nulla consectetur 
+    accusantium corporis repellendus modi! Placeat, 
+    totam provident assumenda reiciendis dicta est sit
+    amet ad dolorem, labore, debitis rem rerum!
+  </p>
+</div>
+<button
+(click)="toggle()"
+>
+Toggle
+</button>
