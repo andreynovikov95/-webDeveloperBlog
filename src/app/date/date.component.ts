@@ -19,4 +19,8 @@ export class DateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  myEvent(event) {
+    console.log(event)
+  }
+
 }
