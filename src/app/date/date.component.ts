@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DateComponent implements OnInit {
   message: string
   constructor() { 
-    this.message = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, hic!'
+    this.message = new Date().toDateString()
   }
 
   ngOnInit(): void {
