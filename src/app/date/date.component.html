@@ -54,3 +54,21 @@
 <div *ngIf="!isCollapsed">
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nam culpa eaque magnam sunt id dignissimos ullam, modi fugiat labore, blanditiis ut officiis sequi quibusdam hic in molestias numquam placeat!</p>
 </div>
+<div>
+  <input
+    type="text"
+    [value]="oneWayBinding"
+  >
+  <p>{{ oneWayBinding }}</p>
+  <input
+    type="text"
+    [ngModel]="oneWayBinding"
+  >
+  <p>{{ oneWayBinding }}</p>
+
+  <input
+    type="text"
+    [(ngModel)]="twoWayBinding"
+  >
+  <p>{{ twoWayBinding }}</p>
+</div>

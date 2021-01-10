@@ -10,6 +10,8 @@ export class DateComponent implements OnInit {
   loggedIn = false
   isCollapsed: boolean = true
   message = new Date().toLocaleTimeString()
+  oneWayBinding: string = "Hello world"
+  twoWayBinding: string = "Hi"
 
   constructor() { 
     setInterval(() => {
