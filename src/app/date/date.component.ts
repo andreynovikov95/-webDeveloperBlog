@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./date.component.styl']
 })
 export class DateComponent implements OnInit {
-  message: string = "World!"
-  constructor() { }
+  message: string
+  constructor() { 
+    this.message = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, hic!'
+  }
 
   ngOnInit(): void {
   }
