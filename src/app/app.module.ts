@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from 'selenium-webdriver/http';
+
+import { NewServiceService } from './new-service.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { PriceComponent } from './price/price.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NewServiceService } from './new-service.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { NewServiceService } from './new-service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [NewServiceService],
   bootstrap: [AppComponent]

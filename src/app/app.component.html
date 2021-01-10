@@ -6,4 +6,15 @@
   <a routerLink="/price">Price</a><br>
   <a routerLink="/date">Date</a>
 </nav>
+User name: <input
+   type="text"
+   [(ngModel)]="userName"
+>
+<button (click)="search()">Search</button>
+<div *ngIf="response">
+  <img src="{{response.avatar_url}}" alt="{{userName}}">
+  <p>Имя: {{response.login}}</p>
+  <p>Репозитории: {{response.public_repos}}</p>
+  <p>Биография: {{response.bio}}</p>
+</div>
 <router-outlet></router-outlet>
